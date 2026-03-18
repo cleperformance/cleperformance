@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Clés auto/moto/PL/agricole, reprog moteur ECU et climatisation PL & Agricole à Perpignan. Intervention mobile dans le 66. Clé perdue, double, transpondeur, perte totale. Devis gratuit.",
   url: "https://cleperformance66.fr", // TODO: confirmer le domaine
-  ogImage: "/og-image-cleperf.png",
+  ogImage: "/opengraph-image",
   phone: "06 86 24 03 53",
   phoneHref: "tel:+33686240353",
   email: "cle.performance66@outlook.fr",

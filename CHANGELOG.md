@@ -4,6 +4,22 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 
 ---
 
+## [1.8.0] — 2026-03-18
+
+### Ajouté
+
+- **Image OG dynamique** (`app/opengraph-image.tsx`) : générée via `next/og` — dégradé navy, badge localisation, nom, tagline, séparateur cyan et 3 cards services (Clés / Reprog Moteur ECU / Climatisation) — remplace l'ancien PNG statique
+
+### Modifié
+
+- `siteConfig.ogImage` mis à jour vers `/opengraph-image`
+
+### Supprimé
+
+- `public/og-image-cleperf.png` : remplacé par la génération dynamique
+
+---
+
 ## [1.7.0] — 2026-03-18
 
 ### Ajouté
