@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum BrandCategory {
+  auto
+  moto
+  pl
+  agricole
+}
+
+model Brand {
+  id              Int           @id @default(autoincrement())
+  slug            String        @unique
+  name            String
+  category        BrandCategory
+  metaTitle       String
+  metaDescription String
+  models          String[]
+  content         String
+  startingPrice   Int
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([category])
+}
+
+model City {
+  id                    Int      @id @default(autoincrement())
+  slug                  String   @unique
+  name                  String
+  postalCode            String
+  distanceFromPerpignan String
+  metaTitle             String
+  metaDescription       String
+  content               String
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Service {
+  id              Int      @id @default(autoincrement())
+  slug            String   @unique
+  title           String
+  shortTitle      String
+  description     String
+  metaTitle       String
+  metaDescription String
+  icon            String
+  features        String[]
+  content         String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model FaqItem {
+  id        Int      @id @default(autoincrement())
+  question  String
+  answer    String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  city      String
+  rating    Int
+  text      String
+  vehicle   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
