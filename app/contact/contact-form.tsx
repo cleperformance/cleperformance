@@ -80,12 +80,13 @@ export function ContactForm() {
           htmlFor="email"
           className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
         >
-          Email
+          Email *
         </label>
         <input
           type="email"
           id="email"
           name="email"
+          required
           disabled={isPending}
           className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
           placeholder="votre@email.com"

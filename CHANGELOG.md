@@ -13,6 +13,8 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 ### Modifié
 
 - `siteConfig.ogImage` mis à jour vers `/opengraph-image`
+- **Formulaire contact** : champ email rendu obligatoire (`required`)
+- **Page contact** : email affiché avec `break-all` pour éviter le scroll horizontal sur mobile
 
 ### Supprimé
 

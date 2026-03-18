@@ -78,7 +78,7 @@ export default function ContactPage() {
                         <p className="text-sm text-muted-foreground">Email</p>
                         <a
                           href={`mailto:${siteConfig.email}`}
-                          className="text-lg font-semibold text-[#0A2A4A] hover:text-[#1A6FAF]"
+                          className="break-all text-lg font-semibold text-[#0A2A4A] hover:text-[#1A6FAF]"
                         >
                           {siteConfig.email}
                         </a>
