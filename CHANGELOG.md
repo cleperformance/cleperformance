@@ -4,6 +4,14 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 
 ---
 
+## [1.9.0] — 2026-03-20
+
+### Sécurité
+
+- **Protection aperçu client** (`middleware.ts`) : HTTP Basic Auth activée si la variable d'environnement `PREVIEW_PASSWORD` est définie — aucune protection si absente (production). Permet de partager un aperçu Vercel sans exposer le site publiquement.
+
+---
+
 ## [1.8.0] — 2026-03-18
 
 ### Ajouté
