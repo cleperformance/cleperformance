@@ -96,6 +96,7 @@ export default async function BrandPage({ params }: PageProps) {
                 width={40}
                 height={40}
                 className="h-10 w-10 object-contain brightness-0 invert"
+                unoptimized
               />
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -105,13 +106,27 @@ export default async function BrandPage({ params }: PageProps) {
           <p className="mt-4 max-w-2xl text-lg text-white/80">
             {brand.metaDescription}
           </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="accent">
+              <a href={siteConfig.phoneHref}>
+                <Phone className="mr-2 h-5 w-5" />
+                Devis gratuit
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline-light">
+              <Link href="/contact">
+                <Mail className="mr-2 h-5 w-5" />
+                Demander un devis
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+          <div className="grid gap-8 sm:grid-cols-[3fr_2fr]">
+            <div>
               <div className="prose prose-lg max-w-none text-muted-foreground">
                 {brand.content.split("\n\n").map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -166,7 +181,7 @@ export default async function BrandPage({ params }: PageProps) {
                     <Button asChild variant="outline-light" className="w-full">
                       <Link href="/contact">
                         <Mail className="mr-2 h-4 w-4" />
-                        Devis gratuit en ligne
+                        Demander un devis
                       </Link>
                     </Button>
                   </div>

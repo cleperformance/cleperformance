@@ -13,6 +13,7 @@ import {
   Bike,
   Car,
   HardHat,
+  Key,
   Tractor,
   Truck,
   Wind,
@@ -21,21 +22,53 @@ import {
 import Link from "next/link";
 
 const iconMap: Record<string, React.ReactNode> = {
-  car: <Car className="h-8 w-8" />,
-  bike: <Bike className="h-8 w-8" />,
-  truck: <Truck className="h-8 w-8" />,
-  tractor: <Tractor className="h-8 w-8" />,
-  construction: <HardHat className="h-8 w-8" />,
-  wrench: <Wrench className="h-8 w-8" />,
-  wind: <Wind className="h-8 w-8" />,
+  wrench: <Wrench className="h-10 w-10" />,
+  wind: <Wind className="h-10 w-10" />,
 };
+
+const KEY_SLUGS = [
+  {
+    slug: "cle-voiture",
+    label: "Voiture",
+    description: "Clé perdue, double, transpondeur, keyless",
+    icon: <Car className="h-7 w-7" />,
+  },
+  {
+    slug: "cle-moto",
+    label: "Moto",
+    description: "HISS, YIM, KIPASS et tous systèmes anti-démarrage",
+    icon: <Bike className="h-7 w-7" />,
+  },
+  {
+    slug: "cle-poids-lourd",
+    label: "Poids Lourd",
+    description: "Camion & utilitaire, OBD HD, intervention sur site",
+    icon: <Truck className="h-7 w-7" />,
+  },
+  {
+    slug: "cle-agricole",
+    label: "Tracteur & Agricole",
+    description: "Tracteur, matériel agricole, urgence récolte",
+    icon: <Tractor className="h-7 w-7" />,
+  },
+  {
+    slug: "cle-engin-chantier",
+    label: "Engin de Chantier",
+    description: "Pelleteuse, grue, nacelle, BTP — sur chantier",
+    icon: <HardHat className="h-7 w-7" />,
+  },
+];
+
+const OTHER_SLUGS = ["reprogrammation-moteur", "climatisation-pl-agricole"];
 
 export async function ServicesSection() {
   const services = await getServices();
+  const bySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
+  const otherServices = OTHER_SLUGS.map((slug) => bySlug[slug]).filter(Boolean);
 
   return (
     <section className="bg-white py-16 sm:py-24" id="services">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Badge variant="secondary" className="mb-4 text-[#C82020]">
             Nos services
@@ -49,25 +82,77 @@ export async function ServicesSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+        {/* Grande card — Reproduction & Programmation de Clés */}
+        <Card className="border-[#F0D898] p-2 transition-all hover:border-[#F0B800]/50 hover:shadow-lg sm:p-4">
+          <CardHeader className="pb-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020]">
+              <Key className="h-7 w-7" />
+            </div>
+            <CardTitle className="text-xl text-[#1C0A08]">
+              Reproduction & Programmation de Clés
+            </CardTitle>
+            <CardDescription className="text-sm text-[#4A6A8A]">
+              Clé perdue, double de sécurité, remplacement après casse — clés
+              mécaniques, transpondeurs, télécommandes et systèmes keyless. OBD,
+              EEPROM, perte totale acceptée. Toutes marques.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4 text-sm font-medium text-[#1C0A08]">
+              Choisissez votre type de véhicule :
+            </p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
+              {KEY_SLUGS.map(({ slug, label, description, icon }) => (
+                <Link
+                  key={slug}
+                  href={`/services/${slug}`}
+                  className="group flex flex-row items-center gap-3 rounded-xl border border-[#F0D898] bg-[#FFFBF5] px-4 py-3 transition-all hover:border-[#C82020]/40 hover:bg-[#C82020]/5 hover:shadow-md sm:flex-col sm:items-center sm:gap-2 sm:px-4 sm:py-4 sm:text-center"
+                >
+                  <span className="shrink-0 text-[#C82020]">{icon}</span>
+                  <span className="flex-1 text-sm font-medium text-[#1C0A08] sm:flex-none sm:text-xs">
+                    {label}
+                  </span>
+                  <span className="hidden text-xs text-[#4A6A8A] sm:block">
+                    {description}
+                  </span>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[#C82020]/50 transition-transform group-hover:translate-x-0.5 group-hover:text-[#C82020]" />
+                </Link>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Cards — Reprog Moteur & Climatisation */}
+        <div className="grid gap-6 sm:grid-cols-2">
+          {otherServices.map((service) => (
             <Card
               key={service.slug}
-              className="group flex h-full flex-col border-border/50 transition-all hover:border-[#F0B800]/50 hover:shadow-lg"
+              className="group flex h-full flex-col border-[#F0D898] transition-all hover:border-[#F0B800]/50 hover:shadow-lg"
             >
               <CardHeader>
-                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020] transition-colors group-hover:bg-[#C82020] group-hover:text-white">
+                <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020] transition-colors group-hover:bg-[#C82020] group-hover:text-white">
                   {iconMap[service.icon]}
                 </div>
                 <CardTitle className="text-xl text-[#1C0A08]">
-                  {service.shortTitle}
+                  {service.title}
                 </CardTitle>
-                <CardDescription className="text-base">
+                <CardDescription className="text-sm text-[#4A6A8A]">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="mt-auto">
-                <Button asChild variant="outline" size="sm" className="w-full">
+                <ul className="mb-6 space-y-2">
+                  {service.features.slice(0, 4).map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2 text-sm text-[#4A6A8A]"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F0B800]" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild variant="outline" className="w-full">
                   <Link href={`/services/${service.slug}`}>
                     En savoir plus
                     <ArrowRight className="ml-2 h-4 w-4" />

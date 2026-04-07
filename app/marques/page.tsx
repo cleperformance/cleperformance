@@ -127,6 +127,7 @@ export default async function MarquesPage() {
                               width={28}
                               height={28}
                               className="h-7 w-7 object-contain"
+                              unoptimized
                             />
                             {brand.name}
                           </span>

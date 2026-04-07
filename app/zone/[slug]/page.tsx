@@ -102,13 +102,27 @@ export default async function CityPage({ params }: PageProps) {
           <p className="mt-4 max-w-2xl text-lg text-white/80">
             {city.postalCode} — à {city.distanceFromPerpignan} de Perpignan
           </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="accent">
+              <a href={siteConfig.phoneHref}>
+                <Phone className="mr-2 h-5 w-5" />
+                Devis gratuit
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline-light">
+              <Link href="/contact">
+                <Mail className="mr-2 h-5 w-5" />
+                Demander un devis
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+          <div className="grid gap-8 sm:grid-cols-[3fr_2fr]">
+            <div>
               <div className="prose prose-lg max-w-none text-muted-foreground">
                 {city.content.split("\n\n").map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -121,22 +135,17 @@ export default async function CityPage({ params }: PageProps) {
                 Nos services à {city.name}
               </h2>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Reprogrammation de clé voiture toutes marques</li>
-                <li>Double de clé avec télécommande</li>
+                <li>
+                  Reproduction & programmation de clé voiture toutes marques
+                </li>
+                <li>Double de clé avec télécommande et systèmes keyless</li>
                 <li>Remplacement de clé perdue ou volée</li>
-                <li>Clé moto et scooter</li>
+                <li>Clé moto et scooter (HISS, YIM, KIPASS...)</li>
                 <li>Clé utilitaire et poids lourd</li>
                 <li>Clé engin agricole et de chantier</li>
+                <li>Reprogrammation moteur ECU (Stage 1, FAP, EGR, AdBlue)</li>
+                <li>Recharge & diagnostic climatisation PL & Agricole</li>
               </ul>
-
-              <div className="mt-8">
-                <Button asChild size="lg">
-                  <a href={siteConfig.phoneHref}>
-                    <Phone className="mr-2 h-5 w-5" />
-                    Appelez-nous pour un devis gratuit
-                  </a>
-                </Button>
-              </div>
             </div>
 
             <div>
@@ -159,7 +168,7 @@ export default async function CityPage({ params }: PageProps) {
                     <Button asChild variant="outline-light" className="w-full">
                       <Link href="/contact">
                         <Mail className="mr-2 h-4 w-4" />
-                        Devis gratuit en ligne
+                        Demander un devis
                       </Link>
                     </Button>
                   </div>

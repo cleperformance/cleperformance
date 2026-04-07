@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site-config";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Key, Phone, Thermometer, Wrench } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -15,13 +15,26 @@ export function Hero() {
               Perpignan & Pyrénées-Orientales (66)
             </div>
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Reproduction & Programmation de clés{" "}
+              Clés, Reprog Moteur & Climatisation{" "}
               <span className="text-[#F0B800]">à Perpignan et dans le 66</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
-              Clés, reprogrammation moteur ECU et climatisation PL & Agricole —
-              intervention mobile directement chez vous à Perpignan et dans tout
-              le 66. Seul opérateur itinérant à combiner les 3 services.
+            <div className="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm text-white/90">
+                <Key className="h-3.5 w-3.5 text-[#F0B800]" />
+                Clés auto · moto · PL · agricole
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm text-white/90">
+                <Wrench className="h-3.5 w-3.5 text-[#F0B800]" />
+                Reprogrammation moteur ECU
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm text-white/90">
+                <Thermometer className="h-3.5 w-3.5 text-[#F0B800]" />
+                Climatisation PL & Agricole
+              </span>
+            </div>
+            <p className="mt-5 text-lg leading-relaxed text-white/80 sm:text-xl">
+              Intervention mobile directement chez vous — seul opérateur
+              itinérant dans le 66 à combiner les 3 services.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Button asChild size="lg" variant="accent" className="text-base">
@@ -51,15 +64,17 @@ export function Hero() {
               </div>
               <div className="h-px w-8 bg-white/20 sm:h-8 sm:w-px" />
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#F0B800]">Rapide</div>
+                <div className="text-2xl font-bold text-[#F0B800]">Réactif</div>
                 <div className="text-xs text-white/60">
-                  Dépannage le jour même
+                  RDV dans les meilleurs délais
                 </div>
               </div>
               <div className="h-px w-8 bg-white/20 sm:h-8 sm:w-px" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-[#F0B800]">-50%</div>
-                <div className="text-xs text-white/60">vs concessionnaire</div>
+                <div className="text-xs text-white/60">
+                  par rapport au concessionnaire
+                </div>
               </div>
             </div>
           </div>

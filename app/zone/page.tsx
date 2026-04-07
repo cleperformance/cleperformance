@@ -59,7 +59,7 @@ export default async function ZonePage() {
             <iframe
               title="Zone d'intervention Clé Performance 66 - Perpignan et Pyrénées-Orientales"
               src="https://www.openstreetmap.org/export/embed.html?bbox=2.35%2C42.45%2C3.20%2C42.85&layer=mapnik&marker=42.6886%2C2.8948"
-              className="h-72 w-full sm:h-96 pointer-events-none"
+              className="-ml-16 h-72 w-[calc(100%+4rem)] sm:h-96 pointer-events-none"
               loading="lazy"
             />
           </div>

@@ -4,6 +4,54 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 
 ---
 
+## [2.2.0] — 2026-04-07
+
+### UX & cohérence — Hero, services, navigation, CTA
+
+#### Hero
+
+- **H1 élargi aux 3 services** : "Reproduction & Programmation de clés…" → "Clés, Reprog Moteur & Climatisation à Perpignan et dans le 66" — le titre reflète désormais l'ensemble de l'offre
+- **3 pills de service** ajoutées sous le H1 (icônes Key / Wrench / Thermometer) : "Clés auto · moto · PL · agricole", "Reprogrammation moteur ECU", "Climatisation PL & Agricole"
+- **Badge "Rapide"** → "Réactif" / sous-titre "RDV dans les meilleurs délais" (supprime la promesse non tenue "Dépannage le jour même")
+- **Badge "-50%"** → sous-titre "par rapport au concessionnaire" (plus explicite que "vs concessionnaire")
+
+#### Page `/services`
+
+- **Grande card unifiée** pour "Reproduction & Programmation de Clés" : remplace les 5 cards individuelles (voiture, moto, PL, agricole, engin de chantier) par une seule card avec 5 icônes cliquables
+  - Mobile : layout ligne compact (icône + label + flèche)
+  - `sm` : grille 2 colonnes avec description par type de véhicule
+  - `lg` : grille 5 colonnes
+- **Reprog Moteur & Climatisation** : 2 cards en 2 colonnes (inchangées dans leur contenu)
+
+#### Section services (landing & pages villes)
+
+- **`ServicesSection`** entièrement réécrit pour reproduire le même pattern que `/services` : grande card clés + 2 cards reprog/clim — appliqué automatiquement à la landing et aux 16 pages de villes
+
+#### Pages détail — cohérence CTA
+
+- **`/services/[slug]`** : hero avec 2 boutons (téléphone + "Demander un devis" → `/contact`) ; sidebar réordonnée : CTA d'abord, "Autres services" dessous
+- **`/marques/[slug]`** : hero avec 2 boutons (téléphone + "Demander un devis") ; libellé "Devis gratuit en ligne" → "Demander un devis"
+- **`/zone/[slug]`** : hero avec 2 boutons identiques ; libellé harmonisé ; "Nos services" étendu aux 3 expertises (ECU reprog + climatisation ajoutés en plus des clés)
+- **Grille contenu / sidebar** : `lg:grid-cols-3` → `sm:grid-cols-[3fr_2fr]` sur les 3 types de pages — sidebar visible dès `sm` (640px) au lieu de `lg` (1024px)
+
+#### Carte OpenStreetMap
+
+- **Boutons de zoom masqués** (`zone-section.tsx` + `app/zone/page.tsx`) : `margin-left: -4rem` + `width: calc(100% + 4rem)` sur l'iframe avec `overflow-hidden` sur le conteneur — les contrôles +/− sont coupés sans altérer la lecture de la carte
+
+#### Header
+
+- **Nav tablette étagée** :
+  - `sm → md` : Services · Marques · Contact
+  - `md → lg` : Services · Marques · Zone d'intervention · Contact
+  - `lg+` : nav complète + numéro de téléphone complet
+- Icône téléphone visible jusqu'à `lg` ; numéro textuel réservé à `lg+`
+
+#### Logos SVG
+
+- **`unoptimized`** ajouté sur tous les `<Image>` utilisant des logos `.svg` (`marques/[slug]`, `brands-section`, `marques/page`, `brand-search-client`) — supprime le warning Next.js sur les dimensions des SVGs non carrés (ex. Dacia)
+
+---
+
 ## [2.1.0] — 2026-03-22
 
 ### Correctifs UX & conformité

@@ -9,7 +9,7 @@ import {
   getServiceBySlug,
   getServices,
 } from "@/lib/queries";
-import { ArrowLeft, Check, Phone } from "lucide-react";
+import { ArrowLeft, Check, Mail, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -101,20 +101,28 @@ export default async function ServicePage({ params }: PageProps) {
           <p className="mt-4 max-w-2xl text-lg text-white/80">
             {service.description}
           </p>
-          <Button asChild size="lg" variant="accent" className="mt-6">
-            <a href={siteConfig.phoneHref}>
-              <Phone className="mr-2 h-5 w-5" />
-              Devis gratuit
-            </a>
-          </Button>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" variant="accent">
+              <a href={siteConfig.phoneHref}>
+                <Phone className="mr-2 h-5 w-5" />
+                Devis gratuit
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline-light">
+              <Link href="/contact">
+                <Mail className="mr-2 h-5 w-5" />
+                Demander un devis
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Content */}
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+          <div className="grid gap-8 sm:grid-cols-[3fr_2fr]">
+            <div>
               <div className="prose prose-lg max-w-none text-muted-foreground">
                 {service.content.split("\n\n").map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -139,6 +147,29 @@ export default async function ServicePage({ params }: PageProps) {
             {/* Sidebar */}
             <div>
               <div className="sticky top-24 space-y-6">
+                <div className="rounded-xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-6 text-white">
+                  <h3 className="mb-2 text-lg font-semibold">
+                    Besoin d&apos;un devis ?
+                  </h3>
+                  <p className="mb-4 text-sm text-white/80">
+                    Appelez-nous ou envoyez un message pour un devis gratuit.
+                  </p>
+                  <div className="flex flex-col gap-3">
+                    <Button asChild variant="accent" className="w-full">
+                      <a href={siteConfig.phoneHref}>
+                        <Phone className="mr-2 h-4 w-4" />
+                        {siteConfig.phone}
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline-light" className="w-full">
+                      <Link href="/contact">
+                        <Mail className="mr-2 h-4 w-4" />
+                        Demander un devis
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
                 <div className="rounded-xl border border-border/50 bg-[#FFFBF5] p-6">
                   <h3 className="mb-4 text-lg font-semibold text-[#1C0A08]">
                     Autres services
@@ -155,22 +186,6 @@ export default async function ServicePage({ params }: PageProps) {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="rounded-xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-6 text-white">
-                  <h3 className="mb-2 text-lg font-semibold">
-                    Besoin d&apos;un devis ?
-                  </h3>
-                  <p className="mb-4 text-sm text-white/80">
-                    Appelez-nous pour un devis gratuit et une intervention
-                    rapide.
-                  </p>
-                  <Button asChild variant="accent" className="w-full">
-                    <a href={siteConfig.phoneHref}>
-                      <Phone className="mr-2 h-4 w-4" />
-                      {siteConfig.phone}
-                    </a>
-                  </Button>
                 </div>
               </div>
             </div>

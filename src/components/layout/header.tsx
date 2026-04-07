@@ -58,15 +58,50 @@ export function Header() {
           ))}
         </nav>
 
+        {/* Tablet Navigation (sm → md) */}
+        <nav className="hidden items-center gap-4 sm:flex md:hidden">
+          {[
+            { name: "Services", href: "/services" },
+            { name: "Marques", href: "/marques" },
+            { name: "Contact", href: "/contact" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-[#1C0A08]/80 transition-colors hover:text-[#C82020]"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Tablet Navigation (md → lg) */}
+        <nav className="hidden items-center gap-3 md:flex lg:hidden">
+          {[
+            { name: "Services", href: "/services" },
+            { name: "Marques", href: "/marques" },
+            { name: "Zone d'intervention", href: "/zone" },
+            { name: "Contact", href: "/contact" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-[#1C0A08]/80 transition-colors hover:text-[#C82020]"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
         {/* CTA Phone */}
         <div className="flex items-center gap-3">
-          <Button asChild className="hidden sm:inline-flex">
+          <Button asChild className="hidden lg:inline-flex">
             <a href={siteConfig.phoneHref}>
               <Phone className="mr-2 h-4 w-4" />
               {siteConfig.phone}
             </a>
           </Button>
-          <Button asChild size="icon" className="sm:hidden">
+          <Button asChild size="icon" className="lg:hidden">
             <a href={siteConfig.phoneHref} aria-label="Appeler">
               <Phone className="h-4 w-4" />
             </a>
