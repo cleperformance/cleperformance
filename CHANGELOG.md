@@ -4,6 +4,92 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 
 ---
 
+## [2.1.0] — 2026-03-22
+
+### Correctifs UX & conformité
+
+#### Recherche de véhicule
+
+- **Insensibilité aux accents** : normalisation NFD dans `BrandSearchClient` — "serie 7", "Serie 7" ou "série 7" trouvent tous "Série 7"
+
+#### Logos
+
+- **Mercedes & Mercedes Trucks** : remplacement du logo 4 branches (incorrect) par l'étoile 3 branches dans un anneau (`polygon` + `circle` SVG) — les deux fichiers `mercedes.svg` et `mercedes-trucks.svg` sont corrigés
+
+#### Footer
+
+- **Disclaimer marques** : ajout d'une ligne de bas de page — _"Les marques et logos mentionnés sur ce site sont la propriété de leurs détenteurs respectifs. Clé Performance 66 est un prestataire indépendant, non affilié ni agréé par ces marques."_ — couvre l'usage nominatif
+
+#### Carte interactive
+
+- **Scroll parasite** : ajout de `pointer-events-none` sur les deux iframes OpenStreetMap (`ZoneSection` landing + page `/zone`) — la carte est désormais figée et ne capture plus le scroll/zoom de la page
+
+#### Horaires & astreinte
+
+- **`site-config.ts`** : `hours.saturday` mis à jour de "Week-end : Fermé" vers "Après 19h et week-end : astreinte" — se propage automatiquement au footer
+- **Page contact** : ligne ajoutée sous les horaires — _"Intervention possible 7j/7 — supplément tarifaire applicable hors horaires"_ (en or `#F0B800`)
+- **Section Tarifs** : note `**` ajoutée — _"Interventions disponibles après 19h et le week-end en astreinte — supplément tarifaire applicable"_
+
+#### Pages marques & villes — sidebar CTA
+
+- **Bouton "Devis gratuit en ligne"** ajouté dans la card sidebar de `/marques/[slug]` et `/zone/[slug]` — `variant="outline-light"` avec icône `Mail`, aligné sur le pattern hero/CTA section (duo téléphone + formulaire sur fond sombre)
+- Espacement `gap-3` entre les deux boutons via `flex flex-col`
+
+#### Section "Comment ça marche" (nouvelle)
+
+- **`how-it-works-section.tsx`** : nouvelle section ajoutée à la landing entre `AdvantagesSection` et `PricingSection`
+- 4 étapes en grille (`lg:grid-cols-4`) : Contactez-nous → Devis immédiat → Intervention sur site → Clés remises & testées
+- Icône dans carré rouge arrondi + badge numéroté en or, ligne tiretée reliant les étapes sur desktop
+- CTA duo centré sous les étapes : `variant="default"` (téléphone) + `variant="outline"` (devis en ligne) — adapté au fond clair `#FFFBF5`
+
+---
+
+## [2.0.0] — 2026-03-22
+
+### Refonte visuelle complète — palette rouge/or + nouveau logo
+
+#### Identité visuelle
+
+- **Nouveau logo** `logo-identitaire.png` (fond transparent) — remplace l'ancien `logo-minimaliste-only.png` partout
+- **Logo icône seule** `logo-identitaire-only.png` (546×546px, fond transparent, carré parfait) — créé par recadrage précis pixel-à-pixel avec ImageMagick pour exclure le texte et l'accent de "CLÉ"
+- **Logo icône fond blanc** `logo-identitaire-only-white.png` (666×666px, centré optiquement à -12px) — pour usage sur fond clair (footer)
+- **"66" en rouge** (`text-[#C82020]`) dans le texte du header (desktop + menu mobile) et du footer
+
+#### Palette de couleurs
+
+Remplacement intégral de la palette bleue/navy/cyan par rouge/bordeaux/or — **39 fichiers modifiés** :
+
+| Avant     | Après     | Usage               |
+| --------- | --------- | ------------------- |
+| `#0A2A4A` | `#1C0A08` | Fond sombre, textes |
+| `#1A6FAF` | `#C82020` | Rouge principal     |
+| `#3AAFDE` | `#F0B800` | Or accent           |
+| `#F8F9FB` | `#FFFBF5` | Fond clair          |
+| `#D8E4EF` | `#F0D898` | Bordures            |
+
+Fichiers concernés :
+
+- `app/globals.css` — CSS variables `:root`
+- `src/components/ui/button.tsx` — variants default, accent, outline, secondary
+- `src/data/site-config.ts` — objet `colors`
+- `src/components/layout/` — header, footer, floating-cta
+- `src/components/sections/` — hero, advantages, brand-search, brands, cta, faq, pricing, services, testimonials, zone (+ brand-search-client)
+- `app/` — a-propos, contact (page + form + actions), marques (index + [slug]), mentions-legales, not-found, services (index + [slug]), zone (index + [slug])
+- `src/lib/json-ld.ts` — couleurs du schéma JSON-LD
+
+#### Image OG
+
+- `app/opengraph-image.tsx` : gradient `#1C0A08 → #6B1010 → #C82020`, badge/séparateur/labels services en or `#F0B800`
+- Suppression de "F-Gaz" dans la card Climatisation
+
+#### Sécurité & confidentialité
+
+- **Téléphone et email** déplacés en variables d'environnement : `NEXT_PUBLIC_PHONE`, `NEXT_PUBLIC_PHONE_HREF`, `NEXT_PUBLIC_EMAIL` — `site-config.ts` lit depuis `process.env`
+- **`.claude/`** ajouté au `.gitignore` — évite l'exposition des credentials de dev locaux
+- `PROJECT.md` et `CHANGELOG.md` nettoyés de toute donnée personnelle (téléphone, email)
+
+---
+
 ## [1.9.0] — 2026-03-20
 
 ### Sécurité
@@ -158,8 +244,8 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 #### Modifié
 
 - Mise à jour des coordonnées réelles dans `site-config.ts` :
-  - Téléphone : `06 86 24 03 53` / `tel:+33686240353`
-  - Email : `cle.performance66@outlook.fr`
+  - Téléphone : `NEXT_PUBLIC_PHONE` / `NEXT_PUBLIC_PHONE_HREF`
+  - Email : `NEXT_PUBLIC_EMAIL`
 
 ---
 

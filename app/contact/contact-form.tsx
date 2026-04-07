@@ -14,18 +14,18 @@ export function ContactForm() {
 
   if (state.status === "success") {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-xl border border-[#D8E4EF] bg-white p-10 text-center shadow-sm">
+      <div className="flex flex-col items-center justify-center gap-4 rounded-xl border border-[#F0D898] bg-white p-10 text-center shadow-sm">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 text-3xl">
           ✓
         </div>
-        <h3 className="text-xl font-bold text-[#0A2A4A]">Demande envoyée !</h3>
+        <h3 className="text-xl font-bold text-[#1C0A08]">Demande envoyée !</h3>
         <p className="text-[#4A6A8A]">
           Nous avons bien reçu votre message et vous recontacterons dans les
           meilleurs délais.
         </p>
         <a
           href={siteConfig.phoneHref}
-          className="mt-2 text-sm font-medium text-[#1A6FAF] hover:underline"
+          className="mt-2 text-sm font-medium text-[#C82020] hover:underline"
         >
           Besoin d&apos;une réponse rapide ? Appelez le {siteConfig.phone}
         </a>
@@ -36,13 +36,13 @@ export function ContactForm() {
   return (
     <form
       action={action}
-      className="space-y-4 rounded-xl border border-[#D8E4EF] bg-white p-6 shadow-sm"
+      className="space-y-4 rounded-xl border border-[#F0D898] bg-white p-6 shadow-sm"
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label
             htmlFor="name"
-            className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
+            className="mb-1.5 block text-sm font-medium text-[#1C0A08]"
           >
             Nom complet *
           </label>
@@ -52,14 +52,14 @@ export function ContactForm() {
             name="name"
             required
             disabled={isPending}
-            className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
+            className="w-full rounded-lg border border-[#F0D898] bg-white px-3 py-2.5 text-sm text-[#1C0A08] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#C82020] focus:ring-1 focus:ring-[#C82020] disabled:opacity-50"
             placeholder="Votre nom"
           />
         </div>
         <div>
           <label
             htmlFor="phone"
-            className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
+            className="mb-1.5 block text-sm font-medium text-[#1C0A08]"
           >
             Téléphone *
           </label>
@@ -69,7 +69,7 @@ export function ContactForm() {
             name="phone"
             required
             disabled={isPending}
-            className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
+            className="w-full rounded-lg border border-[#F0D898] bg-white px-3 py-2.5 text-sm text-[#1C0A08] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#C82020] focus:ring-1 focus:ring-[#C82020] disabled:opacity-50"
             placeholder="06 00 00 00 00"
           />
         </div>
@@ -78,7 +78,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
+          className="mb-1.5 block text-sm font-medium text-[#1C0A08]"
         >
           Email *
         </label>
@@ -88,7 +88,7 @@ export function ContactForm() {
           name="email"
           required
           disabled={isPending}
-          className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
+          className="w-full rounded-lg border border-[#F0D898] bg-white px-3 py-2.5 text-sm text-[#1C0A08] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#C82020] focus:ring-1 focus:ring-[#C82020] disabled:opacity-50"
           placeholder="votre@email.com"
         />
       </div>
@@ -96,7 +96,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="vehicle"
-          className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
+          className="mb-1.5 block text-sm font-medium text-[#1C0A08]"
         >
           Véhicule (marque, modèle, année)
         </label>
@@ -105,7 +105,7 @@ export function ContactForm() {
           id="vehicle"
           name="vehicle"
           disabled={isPending}
-          className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
+          className="w-full rounded-lg border border-[#F0D898] bg-white px-3 py-2.5 text-sm text-[#1C0A08] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#C82020] focus:ring-1 focus:ring-[#C82020] disabled:opacity-50"
           placeholder="Ex: Renault Clio 2020"
         />
       </div>
@@ -113,7 +113,7 @@ export function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="mb-1.5 block text-sm font-medium text-[#0A2A4A]"
+          className="mb-1.5 block text-sm font-medium text-[#1C0A08]"
         >
           Message *
         </label>
@@ -123,7 +123,7 @@ export function ContactForm() {
           required
           rows={5}
           disabled={isPending}
-          className="w-full rounded-lg border border-[#D8E4EF] bg-white px-3 py-2.5 text-sm text-[#0A2A4A] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#1A6FAF] focus:ring-1 focus:ring-[#1A6FAF] disabled:opacity-50"
+          className="w-full rounded-lg border border-[#F0D898] bg-white px-3 py-2.5 text-sm text-[#1C0A08] placeholder:text-[#4A6A8A]/50 outline-none focus:border-[#C82020] focus:ring-1 focus:ring-[#C82020] disabled:opacity-50"
           placeholder="Décrivez votre besoin : clé perdue, double, type de véhicule..."
         />
       </div>
@@ -137,7 +137,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="w-full rounded-lg bg-[#1A6FAF] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#0A2A4A] disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-lg bg-[#C82020] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#1C0A08] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isPending ? "Envoi en cours…" : "Envoyer ma demande de devis"}
       </button>

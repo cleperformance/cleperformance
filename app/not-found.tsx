@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="bg-[#F8F9FB] py-24 sm:py-32">
+    <section className="bg-[#FFFBF5] py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
-        <p className="text-6xl font-bold text-[#1A6FAF]">404</p>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+        <p className="text-6xl font-bold text-[#C82020]">404</p>
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
           Page introuvable
         </h1>
         <p className="mt-4 text-lg text-[#4A6A8A]">
@@ -41,7 +41,7 @@ export default function NotFound() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-xl border border-[#D8E4EF] bg-white p-4 text-sm font-medium text-[#1A6FAF] transition-all hover:border-[#1A6FAF] hover:bg-[#EBF4FB]"
+              className="rounded-xl border border-[#F0D898] bg-white p-4 text-sm font-medium text-[#C82020] transition-all hover:border-[#C82020] hover:bg-[#FFF3E0]"
             >
               {link.label}
             </Link>

@@ -28,7 +28,7 @@ export default function ContactPage() {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Contactez-nous
@@ -46,13 +46,13 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="mb-6 text-2xl font-bold text-[#0A2A4A]">
+                <h2 className="mb-6 text-2xl font-bold text-[#1C0A08]">
                   Nos coordonnées
                 </h2>
                 <div className="space-y-4">
                   <Card className="border-border/50">
                     <CardContent className="flex items-center gap-4 pt-6">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C82020]/10 text-[#C82020]">
                         <Phone className="h-6 w-6" />
                       </div>
                       <div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                         </p>
                         <a
                           href={siteConfig.phoneHref}
-                          className="text-lg font-semibold text-[#0A2A4A] hover:text-[#1A6FAF]"
+                          className="text-lg font-semibold text-[#1C0A08] hover:text-[#C82020]"
                         >
                           {siteConfig.phone}
                         </a>
@@ -71,14 +71,14 @@ export default function ContactPage() {
 
                   <Card className="border-border/50">
                     <CardContent className="flex items-center gap-4 pt-6">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C82020]/10 text-[#C82020]">
                         <Mail className="h-6 w-6" />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Email</p>
                         <a
                           href={`mailto:${siteConfig.email}`}
-                          className="break-all text-lg font-semibold text-[#0A2A4A] hover:text-[#1A6FAF]"
+                          className="break-all text-lg font-semibold text-[#1C0A08] hover:text-[#C82020]"
                         >
                           {siteConfig.email}
                         </a>
@@ -88,12 +88,12 @@ export default function ContactPage() {
 
                   <Card className="border-border/50">
                     <CardContent className="flex items-center gap-4 pt-6">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C82020]/10 text-[#C82020]">
                         <MapPin className="h-6 w-6" />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Adresse</p>
-                        <p className="font-semibold text-[#0A2A4A]">
+                        <p className="font-semibold text-[#1C0A08]">
                           {siteConfig.address.city},{" "}
                           {siteConfig.address.postalCode}
                         </p>
@@ -106,18 +106,22 @@ export default function ContactPage() {
 
                   <Card className="border-border/50">
                     <CardContent className="flex items-center gap-4 pt-6">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C82020]/10 text-[#C82020]">
                         <Clock className="h-6 w-6" />
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">
                           Horaires
                         </p>
-                        <p className="font-semibold text-[#0A2A4A]">
+                        <p className="font-semibold text-[#1C0A08]">
                           {siteConfig.hours.weekdays}
                         </p>
                         <p className="text-sm text-muted-foreground">
                           {siteConfig.hours.saturday}
+                        </p>
+                        <p className="mt-1 text-xs text-[#F0B800]">
+                          Intervention possible 7j/7 — supplément tarifaire
+                          applicable hors horaires
                         </p>
                       </div>
                     </CardContent>
@@ -128,7 +132,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              <h2 className="mb-6 text-2xl font-bold text-[#0A2A4A]">
+              <h2 className="mb-6 text-2xl font-bold text-[#1C0A08]">
                 Demande de devis gratuit
               </h2>
               <ContactForm />

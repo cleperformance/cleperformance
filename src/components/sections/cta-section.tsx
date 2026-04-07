@@ -4,7 +4,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function CtaSection() {
   return (
-    <section className="bg-linear-to-br from-[#0A2A4A] via-[#0F3D6B] to-[#1A6FAF] py-16 sm:py-24">
+    <section className="bg-linear-to-br from-[#1C0A08] via-[#6B1010] to-[#C82020] py-16 sm:py-24">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Besoin d&apos;une clé ? Contactez-nous maintenant

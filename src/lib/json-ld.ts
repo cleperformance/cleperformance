@@ -10,8 +10,8 @@ export function getLocalBusinessJsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: `${siteConfig.url}/logo-minimaliste-only.png`,
-    logo: `${siteConfig.url}/logo-minimaliste-only.png`,
+    image: `${siteConfig.url}/logo-identitaire.png`,
+    logo: `${siteConfig.url}/logo-identitaire.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,

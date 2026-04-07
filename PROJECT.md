@@ -7,8 +7,8 @@
 | **Nom commercial** | Clé Performance 66                    |
 | **Forme**          | Entrepreneur itinérant (solo)         |
 | **Zone**           | Perpignan + Pyrénées-Orientales (66)  |
-| **Téléphone**      | 06 86 24 03 53                        |
-| **Email**          | cle.performance66@outlook.fr          |
+| **Téléphone**      | `NEXT_PUBLIC_PHONE`                   |
+| **Email**          | `NEXT_PUBLIC_EMAIL`                   |
 | **Domaine**        | cleperformance66.fr (à confirmer)     |
 | **Objectif SEO**   | Dominer les recherches locales sur 66 |
 
@@ -157,8 +157,9 @@ prisma/
   seed.ts                           → Script seed (49 marques, 16 villes, 7 services, 8 FAQ, 5 témoignages)
 public/
   logos/                            → SVG logos marques (49 fichiers)
-  logo-minimaliste-only.png         → Logo (carré, fond transparent, 512×512px, 106 Ko)
-  og-image-cleperf.png              → Image OpenGraph (1200x630)
+  logo-identitaire.png              → Logo complet avec texte (fond transparent)
+  logo-identitaire-only.png        → Logo icône seule, carré 546×546px (fond transparent)
+  logo-identitaire-only-white.png  → Logo icône seule, carré 546×546px (fond blanc)
 ```
 
 ---

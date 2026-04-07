@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/data/site-config";
 import { getBreadcrumbJsonLd, getServiceJsonLd } from "@/lib/json-ld";
 import { getAllBrandSlugs, getBrandBySlug, getBrands } from "@/lib/queries";
-import { ArrowLeft, Phone } from "lucide-react";
+import { ArrowLeft, Mail, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,7 +79,7 @@ export default async function BrandPage({ params }: PageProps) {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/marques"
@@ -120,7 +120,7 @@ export default async function BrandPage({ params }: PageProps) {
 
               <Separator className="my-8" />
 
-              <h2 className="mb-6 text-2xl font-bold text-[#0A2A4A]">
+              <h2 className="mb-6 text-2xl font-bold text-[#1C0A08]">
                 Modèles {brand.name} pris en charge
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -128,7 +128,7 @@ export default async function BrandPage({ params }: PageProps) {
                   <Badge
                     key={model}
                     variant="secondary"
-                    className="border border-[#1A6FAF]/20 bg-[#EBF4FB] px-3 py-1.5 text-sm font-medium text-[#0A2A4A]"
+                    className="border border-[#C82020]/20 bg-[#FFF3E0] px-3 py-1.5 text-sm font-medium text-[#1C0A08]"
                   >
                     {brand.name} {model}
                   </Badge>
@@ -138,7 +138,7 @@ export default async function BrandPage({ params }: PageProps) {
 
             <div>
               <div className="sticky top-24 space-y-6">
-                <div className="rounded-xl bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] p-6 text-white">
+                <div className="rounded-xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-6 text-white">
                   <div className="mb-4">
                     <span className="text-sm text-white/60">
                       Prix moyen constaté
@@ -156,16 +156,24 @@ export default async function BrandPage({ params }: PageProps) {
                   <p className="mb-4 text-sm text-white/80">
                     Obtenez un devis gratuit pour votre {brand.name}.
                   </p>
-                  <Button asChild variant="accent" className="w-full">
-                    <a href={siteConfig.phoneHref}>
-                      <Phone className="mr-2 h-4 w-4" />
-                      {siteConfig.phone}
-                    </a>
-                  </Button>
+                  <div className="flex flex-col gap-3">
+                    <Button asChild variant="accent" className="w-full">
+                      <a href={siteConfig.phoneHref}>
+                        <Phone className="mr-2 h-4 w-4" />
+                        {siteConfig.phone}
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline-light" className="w-full">
+                      <Link href="/contact">
+                        <Mail className="mr-2 h-4 w-4" />
+                        Devis gratuit en ligne
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
-                <div className="rounded-xl border border-border/50 bg-[#F8F9FB] p-6">
-                  <h3 className="mb-4 text-lg font-semibold text-[#0A2A4A]">
+                <div className="rounded-xl border border-border/50 bg-[#FFFBF5] p-6">
+                  <h3 className="mb-4 text-lg font-semibold text-[#1C0A08]">
                     Autres marques
                   </h3>
                   <ul className="space-y-2">
@@ -173,7 +181,7 @@ export default async function BrandPage({ params }: PageProps) {
                       <li key={b.slug}>
                         <Link
                           href={`/marques/${b.slug}`}
-                          className="text-sm text-[#1A6FAF] hover:underline"
+                          className="text-sm text-[#C82020] hover:underline"
                         >
                           Clé {b.name}
                         </Link>
@@ -182,7 +190,7 @@ export default async function BrandPage({ params }: PageProps) {
                   </ul>
                   <Link
                     href="/marques"
-                    className="mt-3 block text-sm font-medium text-[#3AAFDE] hover:underline"
+                    className="mt-3 block text-sm font-medium text-[#F0B800] hover:underline"
                   >
                     Voir toutes les marques →
                   </Link>

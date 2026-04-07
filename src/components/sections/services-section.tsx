@@ -37,10 +37,10 @@ export async function ServicesSection() {
     <section className="bg-white py-16 sm:py-24" id="services">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <Badge variant="secondary" className="mb-4 text-[#1A6FAF]">
+          <Badge variant="secondary" className="mb-4 text-[#C82020]">
             Nos services
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Clés, reprogrammation moteur et climatisation
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -53,13 +53,13 @@ export async function ServicesSection() {
           {services.map((service) => (
             <Card
               key={service.slug}
-              className="group flex h-full flex-col border-border/50 transition-all hover:border-[#3AAFDE]/50 hover:shadow-lg"
+              className="group flex h-full flex-col border-border/50 transition-all hover:border-[#F0B800]/50 hover:shadow-lg"
             >
               <CardHeader>
-                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-[#1A6FAF]/10 text-[#1A6FAF] transition-colors group-hover:bg-[#1A6FAF] group-hover:text-white">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020] transition-colors group-hover:bg-[#C82020] group-hover:text-white">
                   {iconMap[service.icon]}
                 </div>
-                <CardTitle className="text-xl text-[#0A2A4A]">
+                <CardTitle className="text-xl text-[#1C0A08]">
                   {service.shortTitle}
                 </CardTitle>
                 <CardDescription className="text-base">

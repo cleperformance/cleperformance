@@ -27,21 +27,21 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#D8E4EF] bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/80">
+    <header className="sticky top-0 z-50 w-full border-b border-[#F0D898] bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="relative h-10 w-10 sm:h-12 sm:w-12">
             <Image
-              src="/logo-minimaliste-only.png"
+              src="/logo-identitaire-only.png"
               alt="Clé Performance 66"
               fill
               className="object-contain"
               sizes="96px"
             />
           </div>
-          <span className="text-lg font-bold text-[#0A2A4A]">
-            Clé Performance 66
+          <span className="text-lg font-bold text-[#1C0A08]">
+            Clé Performance <span className="text-[#C82020]">66</span>
           </span>
         </Link>
 
@@ -51,7 +51,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-[#0A2A4A]/80 transition-colors hover:text-[#1A6FAF]"
+              className="text-sm font-medium text-[#1C0A08]/80 transition-colors hover:text-[#C82020]"
             >
               {item.name}
             </Link>
@@ -75,7 +75,7 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className="inline-flex size-9 items-center justify-center rounded-lg text-[#0A2A4A] hover:bg-[#EBF4FB] lg:hidden"
+              className="inline-flex size-9 items-center justify-center rounded-lg text-[#1C0A08] hover:bg-[#FFF3E0] lg:hidden"
               aria-label="Ouvrir le menu"
             >
               <Menu className="h-5 w-5" />
@@ -90,19 +90,19 @@ export function Header() {
                 >
                   <div className="relative h-10 w-10">
                     <Image
-                      src="/logo-minimaliste-only.png"
+                      src="/logo-identitaire-only.png"
                       alt="Clé Performance 66"
                       fill
                       className="object-contain"
                       sizes="40px"
                     />
                   </div>
-                  <span className="text-lg font-bold text-[#0A2A4A]">
-                    Clé Performance 66
+                  <span className="text-lg font-bold text-[#1C0A08]">
+                    Clé Performance <span className="text-[#C82020]">66</span>
                   </span>
                 </Link>
 
-                <Separator className="my-5 bg-[#D8E4EF]" />
+                <Separator className="my-5 bg-[#F0D898]" />
 
                 <nav className="flex flex-col gap-1">
                   {navigation.map((item) => (
@@ -110,7 +110,7 @@ export function Header() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="rounded-lg px-3 py-2.5 text-base font-medium text-[#0A2A4A] transition-colors hover:bg-[#EBF4FB] hover:text-[#1A6FAF]"
+                      className="rounded-lg px-3 py-2.5 text-base font-medium text-[#1C0A08] transition-colors hover:bg-[#FFF3E0] hover:text-[#C82020]"
                     >
                       {item.name}
                     </Link>
@@ -118,7 +118,7 @@ export function Header() {
                 </nav>
 
                 <div className="mt-auto pb-6">
-                  <Separator className="mb-5 bg-[#D8E4EF]" />
+                  <Separator className="mb-5 bg-[#F0D898]" />
                   <Button asChild size="lg" className="w-full">
                     <a href={siteConfig.phoneHref}>
                       <Phone className="mr-2 h-4 w-4" />

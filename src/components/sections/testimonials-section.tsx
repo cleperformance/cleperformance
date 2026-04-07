@@ -9,7 +9,7 @@ export async function TestimonialsSection() {
     <section className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Ce que disent nos clients
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -22,7 +22,7 @@ export async function TestimonialsSection() {
           {testimonials.slice(0, 3).map((testimonial, i) => (
             <Card key={i} className="border-border/50">
               <CardContent className="pt-6">
-                <Quote className="mb-3 h-8 w-8 text-[#3AAFDE]/40" />
+                <Quote className="mb-3 h-8 w-8 text-[#F0B800]/40" />
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
@@ -35,7 +35,7 @@ export async function TestimonialsSection() {
                   ))}
                 </div>
                 <div className="mt-3">
-                  <p className="text-sm font-semibold text-[#0A2A4A]">
+                  <p className="text-sm font-semibold text-[#1C0A08]">
                     {testimonial.name}
                   </p>
                   <p className="text-xs text-muted-foreground">

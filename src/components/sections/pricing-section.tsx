@@ -117,10 +117,10 @@ export function PricingSection() {
     <section className="bg-[#F8F9FB] py-16 sm:py-24" id="tarifs">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <Badge variant="secondary" className="mb-4 text-[#1A6FAF]">
+          <Badge variant="secondary" className="mb-4 text-[#C82020]">
             Nos tarifs
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Des tarifs transparents et compétitifs
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
@@ -136,10 +136,10 @@ export function PricingSection() {
               className="relative flex h-full flex-col border-border/50 transition-all hover:shadow-lg"
             >
               <CardHeader className="pb-4">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020]">
                   {cat.icon}
                 </div>
-                <CardTitle className="text-lg text-[#0A2A4A]">
+                <CardTitle className="text-lg text-[#1C0A08]">
                   {cat.title}
                 </CardTitle>
                 <CardDescription>{cat.description}</CardDescription>
@@ -150,7 +150,7 @@ export function PricingSection() {
                     À partir de
                   </span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-[#0A2A4A]">
+                    <span className="text-4xl font-bold text-[#1C0A08]">
                       {cat.startingPrice}€
                     </span>
                     <span className="text-sm text-muted-foreground">TTC</span>
@@ -163,7 +163,7 @@ export function PricingSection() {
                       key={feature}
                       className="flex items-start gap-2 text-sm text-[#4A6A8A]"
                     >
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#1A6FAF]" />
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#C82020]" />
                       {feature}
                     </li>
                   ))}
@@ -189,10 +189,15 @@ export function PricingSection() {
           de l&apos;intervention.{" "}
           <Link
             href="/marques"
-            className="font-medium text-[#1A6FAF] hover:underline"
+            className="font-medium text-[#C82020] hover:underline"
           >
             Voir les tarifs par marque →
           </Link>
+        </p>
+        <p className="mt-2 text-center text-sm text-muted-foreground">
+          ** Interventions disponibles après 19h et le week-end en{" "}
+          <span className="font-medium text-[#1C0A08]">astreinte</span> —
+          supplément tarifaire applicable.
         </p>
       </div>
     </section>

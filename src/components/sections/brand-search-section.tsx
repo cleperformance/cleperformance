@@ -17,10 +17,10 @@ export async function BrandSearchSection() {
     <section className="bg-[#F8F9FB] py-16 sm:py-20" id="estimation">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <Badge variant="secondary" className="mb-4 text-[#1A6FAF]">
+          <Badge variant="secondary" className="mb-4 text-[#C82020]">
             Estimation rapide
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Quel est le tarif pour votre véhicule ?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-[#4A6A8A]">

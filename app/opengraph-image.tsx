@@ -10,7 +10,7 @@ export default function OGImage() {
     <div
       style={{
         background:
-          "linear-gradient(135deg, #071E34 0%, #0A2A4A 55%, #1A6FAF 100%)",
+          "linear-gradient(135deg, #1C0A08 0%, #6B1010 55%, #C82020 100%)",
         width: "100%",
         height: "100%",
         display: "flex",
@@ -27,11 +27,11 @@ export default function OGImage() {
           display: "flex",
           alignSelf: "flex-start",
           alignItems: "center",
-          background: "rgba(58, 175, 222, 0.12)",
-          border: "1px solid rgba(58, 175, 222, 0.35)",
+          background: "rgba(240, 184, 0, 0.12)",
+          border: "1px solid rgba(240, 184, 0, 0.35)",
           borderRadius: "100px",
           padding: "8px 22px",
-          color: "#3AAFDE",
+          color: "#F0B800",
           fontSize: "20px",
           marginBottom: "28px",
         }}
@@ -70,7 +70,7 @@ export default function OGImage() {
         style={{
           width: "100%",
           height: "1px",
-          background: "rgba(58,175,222,0.4)",
+          background: "rgba(240,184,0,0.4)",
           marginBottom: "40px",
           display: "flex",
         }}
@@ -82,7 +82,7 @@ export default function OGImage() {
           [
             { label: "Clés", sub: "Auto · Moto · PL · Agri" },
             { label: "Reprog Moteur ECU", sub: "Stage 1 · FAP · EGR · AdBlue" },
-            { label: "Climatisation", sub: "PL & Agricole · F-Gaz" },
+            { label: "Climatisation", sub: "PL & Agricole" },
           ] as const
         ).map(({ label, sub }) => (
           <div
@@ -99,7 +99,7 @@ export default function OGImage() {
           >
             <span
               style={{
-                color: "#3AAFDE",
+                color: "#F0B800",
                 fontSize: "22px",
                 fontWeight: "700",
                 marginBottom: "6px",

@@ -13,18 +13,18 @@ export default function MentionsLegalesPage() {
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="mb-8 text-3xl font-bold text-[#0A2A4A]">
+        <h1 className="mb-8 text-3xl font-bold text-[#1C0A08]">
           Mentions légales
         </h1>
 
         <div className="space-y-10 text-[#4A6A8A]">
           {/* Éditeur */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Éditeur du site
             </h2>
             <p className="leading-relaxed">
-              <strong className="text-[#0A2A4A]">{siteConfig.name}</strong>
+              <strong className="text-[#1C0A08]">{siteConfig.name}</strong>
               <br />
               Forme juridique : Société par Actions Simplifiée Unipersonnelle
               (SASU)
@@ -42,7 +42,7 @@ export default function MentionsLegalesPage() {
               Email :{" "}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-[#1A6FAF] hover:underline"
+                className="text-[#C82020] hover:underline"
               >
                 {siteConfig.email}
               </a>
@@ -51,7 +51,7 @@ export default function MentionsLegalesPage() {
 
           {/* Responsable de publication */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Responsable de publication
             </h2>
             <p className="leading-relaxed">
@@ -62,13 +62,13 @@ export default function MentionsLegalesPage() {
 
           {/* Hébergement */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Hébergement
             </h2>
             <p className="leading-relaxed">
               Ce site est hébergé par :
               <br />
-              <strong className="text-[#0A2A4A]">Vercel Inc.</strong>
+              <strong className="text-[#1C0A08]">Vercel Inc.</strong>
               <br />
               340 Pine Street, Suite 701
               <br />
@@ -78,7 +78,7 @@ export default function MentionsLegalesPage() {
                 href="https://vercel.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1A6FAF] hover:underline"
+                className="text-[#C82020] hover:underline"
               >
                 vercel.com
               </a>
@@ -87,7 +87,7 @@ export default function MentionsLegalesPage() {
 
           {/* Propriété intellectuelle */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Propriété intellectuelle
             </h2>
             <p className="leading-relaxed">
@@ -104,7 +104,7 @@ export default function MentionsLegalesPage() {
 
           {/* Protection des données personnelles */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Protection des données personnelles (RGPD)
             </h2>
             <p className="leading-relaxed">
@@ -113,7 +113,7 @@ export default function MentionsLegalesPage() {
               {siteConfig.name} dans le seul but de répondre à vos demandes de
               devis ou d&apos;information. Elles ne sont transmises à aucun
               tiers, à l&apos;exception du service d&apos;envoi d&apos;emails{" "}
-              <strong className="text-[#0A2A4A]">Resend</strong> (Resend Inc.,
+              <strong className="text-[#1C0A08]">Resend</strong> (Resend Inc.,
               San Francisco, USA), utilisé exclusivement pour
               l&apos;acheminement technique des messages, dans le respect du
               RGPD.
@@ -126,7 +126,7 @@ export default function MentionsLegalesPage() {
               ces droits, contactez-nous à :{" "}
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-[#1A6FAF] hover:underline"
+                className="text-[#C82020] hover:underline"
               >
                 {siteConfig.email}
               </a>
@@ -136,7 +136,7 @@ export default function MentionsLegalesPage() {
                 href="https://www.cnil.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1A6FAF] hover:underline"
+                className="text-[#C82020] hover:underline"
               >
                 CNIL
               </a>
@@ -146,7 +146,7 @@ export default function MentionsLegalesPage() {
 
           {/* Cookies */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Cookies
             </h2>
             <p className="leading-relaxed">
@@ -160,7 +160,7 @@ export default function MentionsLegalesPage() {
 
           {/* Liens externes */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Liens hypertextes
             </h2>
             <p className="leading-relaxed">
@@ -173,7 +173,7 @@ export default function MentionsLegalesPage() {
 
           {/* Droit applicable */}
           <div>
-            <h2 className="mb-3 text-xl font-semibold text-[#0A2A4A]">
+            <h2 className="mb-3 text-xl font-semibold text-[#1C0A08]">
               Droit applicable
             </h2>
             <p className="leading-relaxed">
@@ -182,7 +182,7 @@ export default function MentionsLegalesPage() {
             </p>
           </div>
 
-          <p className="border-t border-[#D8E4EF] pt-6 text-sm text-[#4A6A8A]/60">
+          <p className="border-t border-[#F0D898] pt-6 text-sm text-[#4A6A8A]/60">
             Dernière mise à jour : mars 2026
           </p>
         </div>

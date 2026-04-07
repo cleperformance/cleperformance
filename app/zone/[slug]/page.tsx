@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/data/site-config";
 import { getBreadcrumbJsonLd, getServiceJsonLd } from "@/lib/json-ld";
 import { getAllCitySlugs, getCities, getCityBySlug } from "@/lib/queries";
-import { ArrowLeft, MapPin, Phone } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -84,7 +84,7 @@ export default async function CityPage({ params }: PageProps) {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/zone"
@@ -94,7 +94,7 @@ export default async function CityPage({ params }: PageProps) {
             Zone d&apos;intervention
           </Link>
           <div className="flex items-center gap-3">
-            <MapPin className="h-8 w-8 text-[#3AAFDE]" />
+            <MapPin className="h-8 w-8 text-[#F0B800]" />
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Reprogrammation de clés à {city.name}
             </h1>
@@ -117,7 +117,7 @@ export default async function CityPage({ params }: PageProps) {
 
               <Separator className="my-8" />
 
-              <h2 className="mb-4 text-2xl font-bold text-[#0A2A4A]">
+              <h2 className="mb-4 text-2xl font-bold text-[#1C0A08]">
                 Nos services à {city.name}
               </h2>
               <ul className="space-y-2 text-muted-foreground">
@@ -141,7 +141,7 @@ export default async function CityPage({ params }: PageProps) {
 
             <div>
               <div className="sticky top-24 space-y-6">
-                <div className="rounded-xl bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] p-6 text-white">
+                <div className="rounded-xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-6 text-white">
                   <h3 className="mb-2 text-lg font-semibold">
                     Intervention à {city.name}
                   </h3>
@@ -149,16 +149,24 @@ export default async function CityPage({ params }: PageProps) {
                     À seulement {city.distanceFromPerpignan} de notre atelier.
                     Intervention rapide !
                   </p>
-                  <Button asChild variant="accent" className="w-full">
-                    <a href={siteConfig.phoneHref}>
-                      <Phone className="mr-2 h-4 w-4" />
-                      {siteConfig.phone}
-                    </a>
-                  </Button>
+                  <div className="flex flex-col gap-3">
+                    <Button asChild variant="accent" className="w-full">
+                      <a href={siteConfig.phoneHref}>
+                        <Phone className="mr-2 h-4 w-4" />
+                        {siteConfig.phone}
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline-light" className="w-full">
+                      <Link href="/contact">
+                        <Mail className="mr-2 h-4 w-4" />
+                        Devis gratuit en ligne
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
-                <div className="rounded-xl border border-border/50 bg-[#F8F9FB] p-6">
-                  <h3 className="mb-4 text-lg font-semibold text-[#0A2A4A]">
+                <div className="rounded-xl border border-border/50 bg-[#FFFBF5] p-6">
+                  <h3 className="mb-4 text-lg font-semibold text-[#1C0A08]">
                     Autres villes
                   </h3>
                   <ul className="space-y-2">
@@ -166,7 +174,7 @@ export default async function CityPage({ params }: PageProps) {
                       <li key={c.slug}>
                         <Link
                           href={`/zone/${c.slug}`}
-                          className="flex items-center gap-1 text-sm text-[#1A6FAF] hover:underline"
+                          className="flex items-center gap-1 text-sm text-[#C82020] hover:underline"
                         >
                           <MapPin className="h-3 w-3" />
                           {c.name}
@@ -176,7 +184,7 @@ export default async function CityPage({ params }: PageProps) {
                   </ul>
                   <Link
                     href="/zone"
-                    className="mt-3 block text-sm font-medium text-[#3AAFDE] hover:underline"
+                    className="mt-3 block text-sm font-medium text-[#F0B800] hover:underline"
                   >
                     Voir toutes les villes →
                   </Link>

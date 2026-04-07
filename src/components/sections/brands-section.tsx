@@ -29,7 +29,7 @@ export async function BrandsSection() {
     <section className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Toutes les marques prises en charge
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[#4A6A8A]">
@@ -43,7 +43,7 @@ export async function BrandsSection() {
           const Icon = cat.icon;
           return (
             <div key={cat.key} className="mt-10">
-              <div className="mb-4 flex items-center gap-2 text-[#1A6FAF]">
+              <div className="mb-4 flex items-center gap-2 text-[#C82020]">
                 <Icon className="h-5 w-5" />
                 <h3 className="font-semibold">{cat.label}</h3>
               </div>
@@ -52,7 +52,7 @@ export async function BrandsSection() {
                   <Link key={brand.slug} href={`/marques/${brand.slug}`}>
                     <Badge
                       variant="outline"
-                      className="cursor-pointer gap-2 border-[#D8E4EF] bg-white px-4 py-4 text-sm font-medium text-[#0A2A4A] transition-all hover:border-[#1A6FAF] hover:bg-[#EBF4FB]"
+                      className="cursor-pointer gap-2 border-[#F0D898] bg-white px-4 py-4 text-sm font-medium text-[#1C0A08] transition-all hover:border-[#C82020] hover:bg-[#FFF3E0]"
                     >
                       <Image
                         src={`/logos/${brand.slug}.svg`}
@@ -73,7 +73,7 @@ export async function BrandsSection() {
         <div className="mt-8 text-center">
           <Link
             href="/marques"
-            className="text-sm font-medium text-[#1A6FAF] hover:underline"
+            className="text-sm font-medium text-[#C82020] hover:underline"
           >
             Voir toutes les marques et modèles →
           </Link>

@@ -4,6 +4,7 @@ import { BrandsSection } from "@/components/sections/brands-section";
 import { CtaSection } from "@/components/sections/cta-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { Hero } from "@/components/sections/hero";
+import { HowItWorksSection } from "@/components/sections/how-it-works-section";
 import { PricingSection } from "@/components/sections/pricing-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -25,6 +26,7 @@ export default async function Home() {
       <Hero />
       <ServicesSection />
       <AdvantagesSection />
+      <HowItWorksSection />
       <PricingSection />
       <BrandSearchSection />
       <BrandsSection />

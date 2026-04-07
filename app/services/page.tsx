@@ -84,7 +84,7 @@ export default async function ServicesPage() {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Nos Services
@@ -106,10 +106,10 @@ export default async function ServicesPage() {
             return (
               <div key={group.title}>
                 <div className="mb-10">
-                  <Badge variant="secondary" className="mb-3 text-[#1A6FAF]">
+                  <Badge variant="secondary" className="mb-3 text-[#C82020]">
                     {group.badge}
                   </Badge>
-                  <h2 className="text-2xl font-bold tracking-tight text-[#0A2A4A] sm:text-3xl">
+                  <h2 className="text-2xl font-bold tracking-tight text-[#1C0A08] sm:text-3xl">
                     {group.title}
                   </h2>
                   <p className="mt-2 max-w-2xl text-[#4A6A8A]">
@@ -121,13 +121,13 @@ export default async function ServicesPage() {
                   {groupServices.map((service) => (
                     <Card
                       key={service.slug}
-                      className="group flex h-full flex-col border-[#D8E4EF] transition-all hover:border-[#3AAFDE]/50 hover:shadow-lg"
+                      className="group flex h-full flex-col border-[#F0D898] transition-all hover:border-[#F0B800]/50 hover:shadow-lg"
                     >
                       <CardHeader>
-                        <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-xl bg-[#1A6FAF]/10 text-[#1A6FAF] transition-colors group-hover:bg-[#1A6FAF] group-hover:text-white">
+                        <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020] transition-colors group-hover:bg-[#C82020] group-hover:text-white">
                           {iconMap[service.icon]}
                         </div>
-                        <CardTitle className="text-xl text-[#0A2A4A]">
+                        <CardTitle className="text-xl text-[#1C0A08]">
                           {service.title}
                         </CardTitle>
                         <CardDescription className="text-sm text-[#4A6A8A]">
@@ -141,7 +141,7 @@ export default async function ServicesPage() {
                               key={feature}
                               className="flex items-start gap-2 text-sm text-[#4A6A8A]"
                             >
-                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3AAFDE]" />
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F0B800]" />
                               {feature}
                             </li>
                           ))}

@@ -86,7 +86,7 @@ export default async function ServicePage({ params }: PageProps) {
       />
 
       {/* Hero */}
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/services"
@@ -123,13 +123,13 @@ export default async function ServicePage({ params }: PageProps) {
 
               <Separator className="my-8" />
 
-              <h2 className="mb-6 text-2xl font-bold text-[#0A2A4A]">
+              <h2 className="mb-6 text-2xl font-bold text-[#1C0A08]">
                 Ce que nous proposons
               </h2>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {service.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#3AAFDE]" />
+                    <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#F0B800]" />
                     <span className="text-muted-foreground">{feature}</span>
                   </li>
                 ))}
@@ -139,8 +139,8 @@ export default async function ServicePage({ params }: PageProps) {
             {/* Sidebar */}
             <div>
               <div className="sticky top-24 space-y-6">
-                <div className="rounded-xl border border-border/50 bg-[#F8F9FB] p-6">
-                  <h3 className="mb-4 text-lg font-semibold text-[#0A2A4A]">
+                <div className="rounded-xl border border-border/50 bg-[#FFFBF5] p-6">
+                  <h3 className="mb-4 text-lg font-semibold text-[#1C0A08]">
                     Autres services
                   </h3>
                   <ul className="space-y-3">
@@ -148,7 +148,7 @@ export default async function ServicePage({ params }: PageProps) {
                       <li key={s.slug}>
                         <Link
                           href={`/services/${s.slug}`}
-                          className="text-sm text-[#1A6FAF] hover:underline"
+                          className="text-sm text-[#C82020] hover:underline"
                         >
                           {s.title}
                         </Link>
@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: PageProps) {
                   </ul>
                 </div>
 
-                <div className="rounded-xl bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] p-6 text-white">
+                <div className="rounded-xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-6 text-white">
                   <h3 className="mb-2 text-lg font-semibold">
                     Besoin d&apos;un devis ?
                   </h3>

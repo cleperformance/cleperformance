@@ -12,12 +12,12 @@ export async function ZoneSection() {
         <div className="text-center">
           <Badge
             variant="secondary"
-            className="mb-4 bg-[#EBF4FB] text-[#1A6FAF]"
+            className="mb-4 bg-[#FFF3E0] text-[#C82020]"
           >
             <MapPin className="mr-1 h-3 w-3" />
             Zone d&apos;intervention
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-[#0A2A4A] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#1C0A08] sm:text-4xl">
             Nous intervenons dans tout le 66
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[#4A6A8A]">
@@ -28,11 +28,11 @@ export async function ZoneSection() {
 
         <div className="mt-10 grid gap-8 lg:grid-cols-5">
           {/* Map - prend 3 colonnes */}
-          <div className="overflow-hidden rounded-xl border border-[#D8E4EF] shadow-sm lg:col-span-3">
+          <div className="overflow-hidden rounded-xl border border-[#F0D898] shadow-sm lg:col-span-3">
             <iframe
               title="Zone d'intervention Clé Performance 66 - Perpignan et Pyrénées-Orientales"
               src="https://www.openstreetmap.org/export/embed.html?bbox=2.35%2C42.45%2C3.20%2C42.85&layer=mapnik&marker=42.6886%2C2.8948"
-              className="h-72 w-full sm:h-80 lg:h-full lg:min-h-[500px]"
+              className="h-72 w-full sm:h-80 lg:h-full lg:min-h-[500px] pointer-events-none"
               loading="lazy"
             />
           </div>
@@ -43,13 +43,13 @@ export async function ZoneSection() {
               <Link
                 key={city.slug}
                 href={`/zone/${city.slug}`}
-                className="group flex items-center gap-2 rounded-lg border border-[#D8E4EF] bg-white px-3 py-2 transition-all hover:border-[#3AAFDE]/50 hover:shadow-md"
+                className="group flex items-center gap-2 rounded-lg border border-[#F0D898] bg-white px-3 py-2 transition-all hover:border-[#F0B800]/50 hover:shadow-md"
               >
-                <MapPin className="h-4 w-4 shrink-0 text-[#1A6FAF] group-hover:text-[#3AAFDE]" />
-                <span className="text-sm font-medium text-[#0A2A4A]">
+                <MapPin className="h-4 w-4 shrink-0 text-[#C82020] group-hover:text-[#F0B800]" />
+                <span className="text-sm font-medium text-[#1C0A08]">
                   {city.name}
                 </span>
-                <span className="ml-auto text-xs text-[#1A6FAF]">
+                <span className="ml-auto text-xs text-[#C82020]">
                   {city.distanceFromPerpignan}
                 </span>
               </Link>

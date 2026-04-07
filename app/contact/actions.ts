@@ -33,30 +33,30 @@ export async function sendContactEmail(
       replyTo: email || undefined,
       subject: `Nouvelle demande de devis — ${name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #0A2A4A;">
-          <div style="background: linear-gradient(135deg, #0A2A4A, #1A6FAF); padding: 24px 32px; border-radius: 8px 8px 0 0;">
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1C0A08;">
+          <div style="background: linear-gradient(135deg, #1C0A08, #C82020); padding: 24px 32px; border-radius: 8px 8px 0 0;">
             <h1 style="color: #ffffff; margin: 0; font-size: 20px;">Nouvelle demande de devis</h1>
             <p style="color: rgba(255,255,255,0.7); margin: 4px 0 0; font-size: 14px;">Clé Performance 66 — Formulaire de contact</p>
           </div>
 
-          <div style="background: #F8F9FB; padding: 32px; border: 1px solid #D8E4EF; border-top: none; border-radius: 0 0 8px 8px;">
+          <div style="background: #FFFBF5; padding: 32px; border: 1px solid #F0D898; border-top: none; border-radius: 0 0 8px 8px;">
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; width: 140px; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Nom</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-size: 15px;">${name}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; width: 140px; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Nom</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-size: 15px;">${name}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Téléphone</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-size: 15px;">
-                  <a href="tel:${phone.replace(/\s/g, "")}" style="color: #1A6FAF; text-decoration: none; font-weight: bold;">${phone}</a>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Téléphone</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-size: 15px;">
+                  <a href="tel:${phone.replace(/\s/g, "")}" style="color: #C82020; text-decoration: none; font-weight: bold;">${phone}</a>
                 </td>
               </tr>
               ${
                 email
                   ? `<tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Email</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-size: 15px;">
-                  <a href="mailto:${email}" style="color: #1A6FAF; text-decoration: none;">${email}</a>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Email</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-size: 15px;">
+                  <a href="mailto:${email}" style="color: #C82020; text-decoration: none;">${email}</a>
                 </td>
               </tr>`
                   : ""
@@ -64,8 +64,8 @@ export async function sendContactEmail(
               ${
                 vehicle
                   ? `<tr>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Véhicule</td>
-                <td style="padding: 10px 0; border-bottom: 1px solid #D8E4EF; font-size: 15px;">${vehicle}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-weight: bold; color: #4A6A8A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">Véhicule</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #F0D898; font-size: 15px;">${vehicle}</td>
               </tr>`
                   : ""
               }
@@ -75,7 +75,7 @@ export async function sendContactEmail(
               </tr>
             </table>
 
-            <div style="margin-top: 24px; padding: 16px; background: #EBF4FB; border-radius: 6px; border-left: 3px solid #3AAFDE;">
+            <div style="margin-top: 24px; padding: 16px; background: #FFF3E0; border-radius: 6px; border-left: 3px solid #F0B800;">
               <p style="margin: 0; font-size: 13px; color: #4A6A8A;">
                 📱 Répondez directement à cet email pour contacter le client, ou appelez le <strong>${phone}</strong>.
               </p>

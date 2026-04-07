@@ -77,7 +77,7 @@ export default async function MarquesPage() {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Toutes les marques
@@ -98,16 +98,16 @@ export default async function MarquesPage() {
             className={
               index % 2 === 0
                 ? "bg-white py-16 sm:py-20"
-                : "bg-[#F8F9FB] py-16 sm:py-20"
+                : "bg-[#FFFBF5] py-16 sm:py-20"
             }
           >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="mb-8 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020]">
                   {cat.icon}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0A2A4A]">
+                  <h2 className="text-2xl font-bold text-[#1C0A08]">
                     {cat.title}
                   </h2>
                   <p className="text-sm text-[#4A6A8A]">{cat.description}</p>
@@ -117,9 +117,9 @@ export default async function MarquesPage() {
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {catBrands.map((brand) => (
                   <Link key={brand.slug} href={`/marques/${brand.slug}`}>
-                    <Card className="group h-full border-[#D8E4EF] transition-all hover:border-[#3AAFDE]/50 hover:shadow-lg">
+                    <Card className="group h-full border-[#F0D898] transition-all hover:border-[#F0B800]/50 hover:shadow-lg">
                       <CardHeader>
-                        <CardTitle className="flex items-center justify-between text-lg text-[#0A2A4A] group-hover:text-[#1A6FAF]">
+                        <CardTitle className="flex items-center justify-between text-lg text-[#1C0A08] group-hover:text-[#C82020]">
                           <span className="flex items-center gap-3">
                             <Image
                               src={`/logos/${brand.slug}.svg`}
@@ -130,7 +130,7 @@ export default async function MarquesPage() {
                             />
                             {brand.name}
                           </span>
-                          <span className="text-sm font-semibold text-[#1A6FAF]">
+                          <span className="text-sm font-semibold text-[#C82020]">
                             ~{brand.startingPrice}€
                           </span>
                         </CardTitle>
@@ -143,7 +143,7 @@ export default async function MarquesPage() {
                               <Badge
                                 key={model}
                                 variant="secondary"
-                                className="bg-[#EBF4FB] text-xs text-[#0A2A4A]"
+                                className="bg-[#FFF3E0] text-xs text-[#1C0A08]"
                               >
                                 {model}
                               </Badge>
@@ -151,7 +151,7 @@ export default async function MarquesPage() {
                             {brand.models.length > 5 && (
                               <Badge
                                 variant="secondary"
-                                className="bg-[#EBF4FB] text-xs text-[#4A6A8A]"
+                                className="bg-[#FFF3E0] text-xs text-[#4A6A8A]"
                               >
                                 +{brand.models.length - 5}
                               </Badge>

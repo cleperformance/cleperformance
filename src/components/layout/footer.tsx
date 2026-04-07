@@ -28,7 +28,7 @@ const cityLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#0A2A4A] text-white">
+    <footer className="bg-[#1C0A08] text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Infos entreprise */}
@@ -36,14 +36,16 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <div className="relative h-8 w-8">
                 <Image
-                  src="/logo-minimaliste-only.png"
+                  src="/logo-identitaire-only-white.png"
                   alt="Clé Performance 66"
                   fill
-                  className="object-contain brightness-0 invert"
+                  className="object-contain"
                   sizes="32px"
                 />
               </div>
-              <span className="font-bold">Clé Performance 66</span>
+              <span className="font-bold">
+                Clé Performance <span className="text-[#C82020]">66</span>
+              </span>
             </Link>
             <p className="text-sm text-white/70">
               Clés, reprogrammation moteur ECU et climatisation PL & Agricole —
@@ -53,7 +55,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#3AAFDE]">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#F0B800]">
               Nos Services
             </h3>
             <ul className="space-y-2">
@@ -72,7 +74,7 @@ export function Footer() {
 
           {/* Zone d'intervention */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#3AAFDE]">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#F0B800]">
               Zone d&apos;intervention
             </h3>
             <ul className="space-y-2">
@@ -89,7 +91,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/zone"
-                  className="text-sm font-medium text-[#3AAFDE] transition-colors hover:text-white"
+                  className="text-sm font-medium text-[#F0B800] transition-colors hover:text-white"
                 >
                   Voir toutes les villes →
                 </Link>
@@ -99,7 +101,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#3AAFDE]">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#F0B800]">
               Contact
             </h3>
             <ul className="space-y-3">
@@ -108,7 +110,7 @@ export function Footer() {
                   href={siteConfig.phoneHref}
                   className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#3AAFDE]" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#F0B800]" />
                   {siteConfig.phone}
                 </a>
               </li>
@@ -117,12 +119,12 @@ export function Footer() {
                   href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-[#3AAFDE]" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#F0B800]" />
                   {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#3AAFDE]" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#F0B800]" />
                 <span>
                   {siteConfig.address.city}, {siteConfig.address.postalCode}
                   <br />
@@ -130,7 +132,7 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/70">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#3AAFDE]" />
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#F0B800]" />
                 <span>
                   {siteConfig.hours.weekdays}
                   <br />
@@ -163,6 +165,11 @@ export function Footer() {
             </Link>
           </div>
         </div>
+        <p className="mt-4 text-center text-xs text-white/30">
+          Les marques et logos mentionnés sur ce site sont la propriété de leurs
+          détenteurs respectifs. Clé Performance 66 est un prestataire
+          indépendant, non affilié ni agréé par ces marques.
+        </p>
       </div>
     </footer>
   );

@@ -60,7 +60,7 @@ export default function AProposPage() {
         }}
       />
 
-      <section className="bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] py-16 sm:py-20">
+      <section className="bg-linear-to-br from-[#1C0A08] to-[#C82020] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             À propos de Clé Performance 66
@@ -76,7 +76,7 @@ export default function AProposPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p>
-              <strong className="text-[#0A2A4A]">Clé Performance 66</strong> est
+              <strong className="text-[#1C0A08]">Clé Performance 66</strong> est
               fondée par un technicien expérimenté spécialisé dans
               l&apos;automobile, les véhicules industriels et le machinisme
               agricole. Formé aux systèmes de diagnostic et de programmation
@@ -104,8 +104,8 @@ export default function AProposPage() {
           </div>
 
           {/* Avantage concurrentiel */}
-          <div className="mt-12 rounded-2xl bg-linear-to-br from-[#0A2A4A] to-[#1A6FAF] p-8 text-white">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#3AAFDE]">
+          <div className="mt-12 rounded-2xl bg-linear-to-br from-[#1C0A08] to-[#C82020] p-8 text-white">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#F0B800]">
               Avantage unique dans le 66
             </p>
             <p className="mt-2 text-xl font-bold">
@@ -114,19 +114,19 @@ export default function AProposPage() {
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4 border-t border-white/20 pt-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-[#3AAFDE]">3</div>
+                <div className="text-3xl font-bold text-[#F0B800]">3</div>
                 <div className="mt-1 text-sm text-white/70">
                   Services combinés
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-[#3AAFDE]">66</div>
+                <div className="text-3xl font-bold text-[#F0B800]">66</div>
                 <div className="mt-1 text-sm text-white/70">
                   Communes desservies
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-[#3AAFDE]">J+0</div>
+                <div className="text-3xl font-bold text-[#F0B800]">J+0</div>
                 <div className="mt-1 text-sm text-white/70">
                   Intervention le jour même
                 </div>
@@ -136,9 +136,9 @@ export default function AProposPage() {
         </div>
       </section>
 
-      <section className="bg-[#F8F9FB] py-16 sm:py-24">
+      <section className="bg-[#FFFBF5] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-[#0A2A4A]">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-[#1C0A08]">
             Nos engagements
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,11 +147,11 @@ export default function AProposPage() {
                 key={value.title}
                 className="flex gap-4 rounded-xl bg-white p-6 shadow-sm"
               >
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#1A6FAF]/10 text-[#1A6FAF]">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#C82020]/10 text-[#C82020]">
                   {value.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#0A2A4A]">
+                  <h3 className="text-lg font-semibold text-[#1C0A08]">
                     {value.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">

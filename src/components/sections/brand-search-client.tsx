@@ -24,9 +24,9 @@ const categoryLabels: Record<BrandCategory, string> = {
 };
 
 const categoryStyles: Record<BrandCategory, string> = {
-  auto: "bg-[#EBF4FB] text-[#1A6FAF]",
-  moto: "bg-[#E0F7FD] text-[#3AAFDE]",
-  pl: "bg-[#E8EEF4] text-[#0A2A4A]",
+  auto: "bg-[#FFF3E0] text-[#C82020]",
+  moto: "bg-[#FFF8E6] text-[#F0B800]",
+  pl: "bg-[#F5F0EA] text-[#1C0A08]",
   agricole: "bg-[#EDFAED] text-green-700",
 };
 
@@ -39,14 +39,20 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
     return () => clearTimeout(timer);
   }, [query]);
 
+  const normalize = (str: string) =>
+    str
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
   const results = useMemo(() => {
-    const q = debouncedQuery.trim().toLowerCase();
+    const q = normalize(debouncedQuery.trim());
     if (q.length < 2) return [];
     return brands
       .filter(
         (b) =>
-          b.name.toLowerCase().includes(q) ||
-          b.models.some((m) => m.toLowerCase().includes(q)),
+          normalize(b.name).includes(q) ||
+          b.models.some((m) => normalize(m).includes(q)),
       )
       .slice(0, 6);
   }, [debouncedQuery, brands]);
@@ -63,7 +69,7 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Ex : Renault, Golf, Clio, Yaris, BMW..."
           aria-label="Rechercher une marque ou un modèle de véhicule"
-          className="w-full rounded-xl border border-[#D8E4EF] bg-white py-4 pl-12 pr-4 text-[#0A2A4A] shadow-sm placeholder:text-[#4A6A8A]/70 focus:border-[#1A6FAF] focus:outline-none focus:ring-2 focus:ring-[#1A6FAF]/20"
+          className="w-full rounded-xl border border-[#F0D898] bg-white py-4 pl-12 pr-4 text-[#1C0A08] shadow-sm placeholder:text-[#4A6A8A]/70 focus:border-[#C82020] focus:outline-none focus:ring-2 focus:ring-[#C82020]/20"
         />
       </div>
 
@@ -74,7 +80,7 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
               Aucune marque trouvée.{" "}
               <a
                 href={siteConfig.phoneHref}
-                className="font-medium text-[#1A6FAF] hover:underline"
+                className="font-medium text-[#C82020] hover:underline"
               >
                 Appelez-nous pour un devis gratuit.
               </a>
@@ -85,7 +91,7 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
                 <Link
                   key={brand.slug}
                   href={`/marques/${brand.slug}`}
-                  className="flex items-center justify-between rounded-xl border border-[#D8E4EF] bg-white p-4 transition-all hover:border-[#1A6FAF] hover:shadow-md"
+                  className="flex items-center justify-between rounded-xl border border-[#F0D898] bg-white p-4 transition-all hover:border-[#C82020] hover:shadow-md"
                 >
                   <div className="flex items-center gap-3">
                     <Image
@@ -96,7 +102,7 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
                       className="h-7 w-7 object-contain"
                     />
                     <div>
-                      <p className="font-semibold text-[#0A2A4A]">
+                      <p className="font-semibold text-[#1C0A08]">
                         {brand.name}
                       </p>
                       <span
@@ -107,7 +113,7 @@ export function BrandSearchClient({ brands }: { brands: BrandSearchData[] }) {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-lg font-bold text-[#1A6FAF]">
+                    <p className="text-lg font-bold text-[#C82020]">
                       ~{brand.startingPrice}€
                     </p>
                     <p className="text-xs text-[#4A6A8A]">estimation</p>
