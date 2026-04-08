@@ -4,6 +4,29 @@ Historique des modifications du site vitrine [cleperformance66.fr](https://clepe
 
 ---
 
+## [2.3.0] — 2026-04-08
+
+### UX & cohérence — icône clim, CTA multi-services, contact & footer
+
+#### Hero
+
+- **Icône climatisation** : `Thermometer` → `Wind` (lucide-react) — cohérente avec les autres sections du site
+
+#### Section CTA (toutes pages)
+
+- **Titre** : "Besoin d'une clé ? Contactez-nous maintenant" → "Besoin d'une intervention ? Contactez-nous maintenant"
+- **Description** : ajout des 3 services en toutes lettres — "Reprogrammation de clés · Reprog moteur ECU · Climatisation PL & Agricole" — au lieu de ne mentionner que les clés
+
+#### Page `/contact`
+
+- **Téléphone & email** : suppression de `text-lg` sur les deux liens — taille de police uniformisée avec les autres lignes de coordonnées (adresse, horaires)
+
+#### Footer — section "Nos Services"
+
+- **Réorganisation** : 5 liens clés individuels → 2 liens groupés ("Clés auto & moto", "Clés PL, agricole & chantier") — équilibre 2:1:1 entre clés, reprog moteur et climatisation (était 5:1:1)
+
+---
+
 ## [2.2.0] — 2026-04-07
 
 ### UX & cohérence — Hero, services, navigation, CTA

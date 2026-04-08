@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site-config";
-import { ArrowRight, Key, Phone, Thermometer, Wrench } from "lucide-react";
+import { ArrowRight, Key, Phone, Wind, Wrench } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -28,7 +28,7 @@ export function Hero() {
                 Reprogrammation moteur ECU
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm text-white/90">
-                <Thermometer className="h-3.5 w-3.5 text-[#F0B800]" />
+                <Wind className="h-3.5 w-3.5 text-[#F0B800]" />
                 Climatisation PL & Agricole
               </span>
             </div>

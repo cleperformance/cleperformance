@@ -61,7 +61,7 @@ export default function ContactPage() {
                         </p>
                         <a
                           href={siteConfig.phoneHref}
-                          className="text-lg font-semibold text-[#1C0A08] hover:text-[#C82020]"
+                          className="font-semibold text-[#1C0A08] hover:text-[#C82020]"
                         >
                           {siteConfig.phone}
                         </a>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                         <p className="text-sm text-muted-foreground">Email</p>
                         <a
                           href={`mailto:${siteConfig.email}`}
-                          className="break-all text-lg font-semibold text-[#1C0A08] hover:text-[#C82020]"
+                          className="break-all font-semibold text-[#1C0A08] hover:text-[#C82020]"
                         >
                           {siteConfig.email}
                         </a>

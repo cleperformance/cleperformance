@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const serviceLinks = [
-  { name: "Clé voiture", href: "/services/cle-voiture" },
-  { name: "Clé moto", href: "/services/cle-moto" },
-  { name: "Clé poids lourd", href: "/services/cle-poids-lourd" },
-  { name: "Clé agricole", href: "/services/cle-agricole" },
-  { name: "Clé engin de chantier", href: "/services/cle-engin-chantier" },
-  { name: "Reprog moteur ECU", href: "/services/reprogrammation-moteur" },
+  { name: "Clés auto & moto", href: "/services/cle-voiture" },
+  { name: "Clés PL, agricole & chantier", href: "/services/cle-poids-lourd" },
   {
-    name: "Climatisation PL & Agri",
+    name: "Reprogrammation moteur ECU",
+    href: "/services/reprogrammation-moteur",
+  },
+  {
+    name: "Climatisation PL & Agricole",
     href: "/services/climatisation-pl-agricole",
   },
 ];
